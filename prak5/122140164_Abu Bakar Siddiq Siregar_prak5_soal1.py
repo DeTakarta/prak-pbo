@@ -3,9 +3,9 @@ import random
 
 RED = (255, 0, 0)
 
-# Konstanta
-SCREEN_WIDTH = 400
-SCREEN_HEIGHT = 400
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
 BLOCK_SIZE = 20
 FPS = 10
 
@@ -96,7 +96,7 @@ class Game:
     def check_collision(self):
         if self.snake.x == self.food.x and self.snake.y == self.food.y:
             self.snake.grow()
-            self.food = Food()  # spawn new food
+            self.food = Food()  
 
         for block in self.snake.body[1:]:
             if self.snake.x == block[0] and self.snake.y == block[1]:
